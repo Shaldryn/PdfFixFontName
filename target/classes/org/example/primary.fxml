@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane hgap="10.0" prefWidth="550.0" style="-fx-background-color: #f0f8ff;" vgap="10.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.PrimaryController">
+   <columnConstraints>
+      <ColumnConstraints maxWidth="290.0" minWidth="10.0" prefWidth="133.0" />
+      <ColumnConstraints maxWidth="467.0" minWidth="10.0" prefWidth="432.0" />
+      <ColumnConstraints maxWidth="467.0" minWidth="32.0" prefWidth="38.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+   </rowConstraints>
+   <padding>
+      <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+   </padding>
+   <children>
+      <Text strokeWidth="0.0" text="Fix PDF Files" wrappingWidth="167.880859375" GridPane.columnSpan="2" GridPane.rowIndex="1">
+         <font>
+            <Font name="Consolas Bold" size="22.0" />
+         </font>
+      </Text>
+      <Label text="Input path:" GridPane.rowIndex="2" />
+      <TextField fx:id="pathId" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Button mnemonicParsing="false" onAction="#btnPathClick" prefHeight="25.0" prefWidth="34.0" text="..." GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Button mnemonicParsing="false" onAction="#btnStartClick" prefHeight="25.0" prefWidth="56.0" text="Start" GridPane.rowIndex="3" />
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <children>
+            <Button mnemonicParsing="false" onAction="#btnCancelClick" text="Cancel" translateY="3.0" />
+            <ProgressBar fx:id="barId" minWidth="200.0" prefHeight="22.0" prefWidth="272.0" progress="0.0" translateX="50.0" translateY="4.0" />
+         </children>
+      </HBox>
+   </children>
+</GridPane>
